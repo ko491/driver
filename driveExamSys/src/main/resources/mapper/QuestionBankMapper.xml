@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduation.driveexamsys.mapper.QuestionBankMapper">
+
+    <resultMap id="BaseResultMap" type="com.graduation.driveexamsys.domain.QuestionBank">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="questiontext" column="questiontext" jdbcType="VARCHAR"/>
+            <result property="optionA" column="optionA" jdbcType="VARCHAR"/>
+            <result property="optionB" column="optionB" jdbcType="VARCHAR"/>
+            <result property="optionC" column="optionC" jdbcType="VARCHAR"/>
+            <result property="optionD" column="optionD" jdbcType="VARCHAR"/>
+            <result property="answer" column="answer" jdbcType="VARCHAR"/>
+            <result property="explanation" column="explanation" jdbcType="VARCHAR"/>
+            <result property="coachid" column="coachId" jdbcType="INTEGER"/>
+            <result property="uploadtime" column="uploadTime" jdbcType="TIMESTAMP"/>
+        <result property="isdeleted" column="isDeleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,questiontext,optionA,
+        optionB,optionC,optionD,
+        answer,explanation,
+        coachId,uploadTime,isDeleted
+    </sql>
+</mapper>

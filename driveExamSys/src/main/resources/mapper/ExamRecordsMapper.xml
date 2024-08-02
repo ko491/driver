@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduation.driveexamsys.mapper.ExamRecordsMapper">
+
+    <resultMap id="BaseResultMap" type="com.graduation.driveexamsys.domain.ExamRecords">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="studentid" column="studentId" jdbcType="INTEGER"/>
+            <result property="starttime" column="startTime" jdbcType="TIMESTAMP"/>
+            <result property="endtime" column="endTime" jdbcType="TIMESTAMP"/>
+            <result property="score" column="score" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,studentId,startTime,
+        endTime,score
+    </sql>
+</mapper>
